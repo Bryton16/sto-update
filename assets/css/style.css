@@ -1,0 +1,110 @@
+.bg-dark {
+  background-color: #FFFFFF !important;
+  font-family: "Poppins" !important;
+}
+
+.nav-link:hover {
+  color: #1126C0 !important;
+}
+
+.container-fluid{
+  background-color: #000000;
+  padding:30px;
+  font-family: "Poppins";
+  color: #FFFFFF;
+  height: 420px;
+  overflow:hidden;
+}
+
+.description {
+  font-size: 14px;
+}
+
+
+.bt {
+  margin:10px !important;
+}
+
+.badge {
+  padding:0px !important;
+  background-color: #000000 !important;
+}
+
+main {
+  font-family: "Poppins";
+}
+
+.clearfix {
+  margin-top:20px;
+}
+
+.container-fluid .wave {
+  position: absolute;
+  bottom:auto;
+  left:0;
+  width:100%;
+  height: 100px;
+  background: url("../img/wave.png");
+  background-size: 1000px 100px;
+}
+
+.container-fluid .wave.wave1 {
+  animation: animate 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+}
+.container-fluid .wave.wave2 {
+  animation: animate2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+
+}
+
+.container-fluid .wave.wave3 {
+  animation: animate 30s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+}
+
+.container-fluid .wave.wave4 {
+  animation: animate2 5s linear infinite;
+  z-index: 997;
+  opacity: 0.7;
+  animation-delay: -5s;
+}
+
+@keyframes animate {
+  0%
+  {
+    background-position-x: 0;
+  }
+
+  100%
+  {
+    background-position-x: 1000px;
+  }
+}
+@keyframes animate2 {
+  0%
+  {
+    background-position-x: 0;
+  }
+
+  100%
+  {
+    background-position-x: -1000px;
+  }
+}
+
+@media screen and (max-width: 985px) {
+  .container-fluid{
+    background-color: #000000;
+    padding:30px;
+    font-family: "Poppins";
+    color: #FFFFFF;
+    height: 550px;
+  }
+}
