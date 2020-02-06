@@ -1,3 +1,7 @@
+<?php
+$page = "Accueil";
+
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -14,16 +18,16 @@
         <h2><div class="border border-light badge badge-pill badge-light">
           <div class="row">
             <div class="col-mg-4 col-lg-4 col-xs-12 col-sm-12">
-              <a href="#biographie" class="rounded-pill bt btn btn-outline-light">Biographie</a>
+              <button id="biographieButton" type="button" class="rounded-pill bt btn btn-outline-light">Biographie</button>
 
             </div>
 
+            <div class="col-mg-4 col-lg-4 col-xs-12 col-sm-12">
+              <button id="devisButton" type="button" class="rounded-pill bt btn btn-outline-light">Devis</button>
+
+            </div>
             <div class="col-mg-4 col-lg-4 col-xs-12 col-sm-12">
               <button type="button" class="rounded-pill bt btn btn-outline-light">Services</button>
-
-            </div>
-            <div class="col-mg-4 col-lg-4 col-xs-12 col-sm-12">
-              <button type="button" class="rounded-pill bt btn btn-outline-light">Devis</button>
 
             </div>
           </div>
@@ -41,5 +45,22 @@
       <div class="wave wave4"></div>
     </div>
     <?php include('template/main.php'); ?>
+
+    <script>
+
+
+    $("#biographieButton").click(function() {
+      $('html, body').animate({
+          scrollTop: $("#biographie").offset().top
+      }, 1000);
+  });
+
+  $("#devisButton").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#devis").offset().top
+    }, 1000);
+  });
+
+    </script>
   </body>
 </html>

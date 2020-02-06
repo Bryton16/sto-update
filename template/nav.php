@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+<nav id="nav" class="navbar navbar-expand-lg navbar-light bg-dark">
   <div class="container">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -27,13 +27,18 @@
     </div>
   </div>
 </nav>
-<script type="text/javascript">
-  window.onscroll = function() {scrollFunction()};
-  function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-50px";
-  }
-}
+<script>
+$(document).ready(function($){
+
+
+  $(window).scroll(function(){
+
+    if($(window).scrollTop() >= 100) {
+      $('.navbar').addClass('shrink');
+    } else {
+      $('.navbar').removeClass('shrink');
+    }
+
+  });
+});
 </script>
